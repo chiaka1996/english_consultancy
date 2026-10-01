@@ -368,7 +368,7 @@ export default async function HomePage() {
                 Start Structured Learning
               </h3>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Begin dedicated in-person or virtual sessions with experienced educators utilizing interactive, practical coursework.
+                Begin dedicated in-person or virtual sessions with experienced educators - -- utilizing interactive, practical coursework.
               </p>
             </div>
 
