@@ -19,6 +19,7 @@ import Button from "@/components/Button";
 import ServiceCard from "@/components/ServiceCard";
 import TestimonialCard from "@/components/TestimonialCard";
 import CTASection from "@/components/CTASection";
+import FadeIn from "@/components/FadeIn";
 
 import { services } from "@/data/services";
 import { testimonials } from "@/data/testimonials";
@@ -58,7 +59,7 @@ export default async function HomePage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
             {/* Left Hero Content */}
-            <div className="lg:col-span-7 space-y-6 text-left">
+            <FadeIn className="lg:col-span-7 space-y-6 text-left">
               <div className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-sand-100 border border-sand-200 text-xs font-semibold text-navy-900 uppercase tracking-wider">
                 <Sparkles className="w-3.5 h-3.5 text-accent-700" />
                 <span>Specialized English Education &amp; Advisory</span>
@@ -100,14 +101,14 @@ export default async function HomePage() {
                   <span>Personalized Diagnostics</span>
                 </div>
               </div>
-            </div>
+            </FadeIn>
 
             {/* Right Hero Image */}
-            <div className="lg:col-span-5 relative">
+            <FadeIn delay={150} className="lg:col-span-5 relative">
               <div className="relative mx-auto max-w-md lg:max-w-none rounded-xl overflow-hidden shadow-lg border border-slate-200 bg-slate-100">
                 <div className="relative aspect-[4/5] w-full">
                   <Image
-                    src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?auto=format&fit=crop&w=1000&q=80"
+                    src="/images/banner4.jpg"
                     alt="Students and educator collaborating in a focused English learning session"
                     fill
                     priority
@@ -132,7 +133,7 @@ export default async function HomePage() {
                   </div>
                 </div>
               </div>
-            </div>
+            </FadeIn>
           </div>
         </div>
       </section>
@@ -141,7 +142,7 @@ export default async function HomePage() {
       <section className="bg-sand-50 border-b border-sand-200/80 py-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 lg:gap-8">
-            <div className="flex items-center gap-3">
+            <FadeIn delay={0} className="flex items-center gap-3">
               <div className="w-10 h-10 rounded bg-white border border-slate-200 flex items-center justify-center text-navy-900 shrink-0">
                 <Compass className="w-5 h-5 text-accent-800" />
               </div>
@@ -149,9 +150,9 @@ export default async function HomePage() {
                 <h3 className="text-sm font-bold text-navy-950">Diagnostic First</h3>
                 <p className="text-xs text-slate-500">Targeted assessment before lessons</p>
               </div>
-            </div>
+            </FadeIn>
 
-            <div className="flex items-center gap-3">
+            <FadeIn delay={100} className="flex items-center gap-3">
               <div className="w-10 h-10 rounded bg-white border border-slate-200 flex items-center justify-center text-navy-900 shrink-0">
                 <Users className="w-5 h-5 text-accent-800" />
               </div>
@@ -159,9 +160,9 @@ export default async function HomePage() {
                 <h3 className="text-sm font-bold text-navy-950">Dedicated Educators</h3>
                 <p className="text-xs text-slate-500">Passionate, supportive mentorship</p>
               </div>
-            </div>
+            </FadeIn>
 
-            <div className="flex items-center gap-3">
+            <FadeIn delay={200} className="flex items-center gap-3">
               <div className="w-10 h-10 rounded bg-white border border-slate-200 flex items-center justify-center text-navy-900 shrink-0">
                 <Award className="w-5 h-5 text-accent-800" />
               </div>
@@ -169,9 +170,9 @@ export default async function HomePage() {
                 <h3 className="text-sm font-bold text-navy-950">Proven Curriculum</h3>
                 <p className="text-xs text-slate-500">WAEC, UTME, and business standards</p>
               </div>
-            </div>
+            </FadeIn>
 
-            <div className="flex items-center gap-3">
+            <FadeIn delay={300} className="flex items-center gap-3">
               <div className="w-10 h-10 rounded bg-white border border-slate-200 flex items-center justify-center text-navy-900 shrink-0">
                 <Layers className="w-5 h-5 text-accent-800" />
               </div>
@@ -179,7 +180,7 @@ export default async function HomePage() {
                 <h3 className="text-sm font-bold text-navy-950">Dual Delivery</h3>
                 <p className="text-xs text-slate-500">Lagos in-person &amp; virtual online</p>
               </div>
-            </div>
+            </FadeIn>
           </div>
         </div>
       </section>
@@ -188,19 +189,19 @@ export default async function HomePage() {
       <section className="py-16 sm:py-24 bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
-            <div className="lg:col-span-5 relative order-2 lg:order-1">
+            <FadeIn className="lg:col-span-5 relative order-2 lg:order-1">
               <div className="relative aspect-[4/3] rounded-xl overflow-hidden border border-slate-200 shadow-sm bg-slate-100">
                 <Image
-                  src="https://images.unsplash.com/photo-1577896851231-70ef18881754?auto=format&fit=crop&w=1000&q=80"
+                  src="/images/bless.jpeg"
                   alt="English educator guiding a young learner with study material"
                   fill
                   sizes="(max-width: 1024px) 100vw, 40vw"
                   className="object-cover"
                 />
               </div>
-            </div>
+            </FadeIn>
 
-            <div className="lg:col-span-7 space-y-5 order-1 lg:order-2">
+            <FadeIn delay={150} className="lg:col-span-7 space-y-5 order-1 lg:order-2">
               <span className="text-xs font-bold uppercase tracking-widest text-accent-800 bg-accent-50 border border-accent-100 px-3 py-1 rounded-full">
                 About English Lab Consultancy
               </span>
@@ -230,7 +231,7 @@ export default async function HomePage() {
                   <ArrowRight className="w-4 h-4 ml-1.5 group-hover:translate-x-1 transition-transform" />
                 </Link>
               </div>
-            </div>
+            </FadeIn>
           </div>
         </div>
       </section>
@@ -247,17 +248,19 @@ export default async function HomePage() {
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            {services.map((service) => (
-              <ServiceCard key={service.id} service={service} mode="compact" />
+            {services.map((service, idx) => (
+              <FadeIn key={service.id} delay={idx * 100}>
+                <ServiceCard service={service} mode="compact" />
+              </FadeIn>
             ))}
           </div>
 
-          <div className="mt-12 text-center">
+          <FadeIn delay={200} className="mt-12 text-center">
             <Button href="/services" variant="navy" size="md">
               <span>View Detailed Programme Curricula</span>
               <ArrowRight className="w-4 h-4 ml-2" />
             </Button>
-          </div>
+          </FadeIn>
         </div>
       </section>
 
@@ -273,7 +276,7 @@ export default async function HomePage() {
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-            <div className="space-y-3">
+            <FadeIn delay={0} className="space-y-3">
               <div className="w-10 h-10 rounded-md bg-navy-950 text-accent-300 font-serif font-bold flex items-center justify-center text-lg">
                 01
               </div>
@@ -283,9 +286,9 @@ export default async function HomePage() {
               <p className="text-sm text-slate-600 leading-relaxed">
                 No two students learn alike. We evaluate strengths, address specific bottlenecks, and craft bespoke learning pacing.
               </p>
-            </div>
+            </FadeIn>
 
-            <div className="space-y-3">
+            <FadeIn delay={100} className="space-y-3">
               <div className="w-10 h-10 rounded-md bg-navy-950 text-accent-300 font-serif font-bold flex items-center justify-center text-lg">
                 02
               </div>
@@ -295,9 +298,9 @@ export default async function HomePage() {
               <p className="text-sm text-slate-600 leading-relaxed">
                 We emphasize active usage over passive memorization. Students practice speaking, composing, and editing in every session.
               </p>
-            </div>
+            </FadeIn>
 
-            <div className="space-y-3">
+            <FadeIn delay={200} className="space-y-3">
               <div className="w-10 h-10 rounded-md bg-navy-950 text-accent-300 font-serif font-bold flex items-center justify-center text-lg">
                 03
               </div>
@@ -307,9 +310,9 @@ export default async function HomePage() {
               <p className="text-sm text-slate-600 leading-relaxed">
                 Deep familiarity with official WAEC, NECO, and UTME test patterns, lexis conventions, and time-management strategies.
               </p>
-            </div>
+            </FadeIn>
 
-            <div className="space-y-3">
+            <FadeIn delay={300} className="space-y-3">
               <div className="w-10 h-10 rounded-md bg-navy-950 text-accent-300 font-serif font-bold flex items-center justify-center text-lg">
                 04
               </div>
@@ -319,7 +322,7 @@ export default async function HomePage() {
               <p className="text-sm text-slate-600 leading-relaxed">
                 Seamless scheduling across in-person sessions in Lagos and high-engagement digital classrooms accessible anywhere.
               </p>
-            </div>
+            </FadeIn>
           </div>
         </div>
       </section>
@@ -336,7 +339,7 @@ export default async function HomePage() {
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 relative">
-            <div className="bg-white border border-slate-200 rounded-lg p-6 shadow-sm relative">
+            <FadeIn delay={0} className="bg-white border border-slate-200 rounded-lg p-6 shadow-sm relative">
               <span className="text-2xl font-serif font-bold text-accent-800 mb-2 block">
                 01
               </span>
@@ -346,9 +349,9 @@ export default async function HomePage() {
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                 Submit an initial enquiry detailing your target examinations, learning difficulties, or communication ambitions.
               </p>
-            </div>
+            </FadeIn>
 
-            <div className="bg-white border border-slate-200 rounded-lg p-6 shadow-sm relative">
+            <FadeIn delay={100} className="bg-white border border-slate-200 rounded-lg p-6 shadow-sm relative">
               <span className="text-2xl font-serif font-bold text-accent-800 mb-2 block">
                 02
               </span>
@@ -358,9 +361,9 @@ export default async function HomePage() {
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                 We conduct an initial baseline assessment and recommend the exact tutoring structure or curriculum track best suited for you.
               </p>
-            </div>
+            </FadeIn>
 
-            <div className="bg-white border border-slate-200 rounded-lg p-6 shadow-sm relative">
+            <FadeIn delay={200} className="bg-white border border-slate-200 rounded-lg p-6 shadow-sm relative">
               <span className="text-2xl font-serif font-bold text-accent-800 mb-2 block">
                 03
               </span>
@@ -368,11 +371,11 @@ export default async function HomePage() {
                 Start Structured Learning
               </h3>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
-                Begin dedicated in-person or virtual sessions with experienced educators utilizing interactive, practical coursework.
+                Begin dedicated in-person or virtual sessions with experienced educators - utilizing interactive, practical coursework.
               </p>
-            </div>
+            </FadeIn>
 
-            <div className="bg-white border border-slate-200 rounded-lg p-6 shadow-sm relative">
+            <FadeIn delay={300} className="bg-white border border-slate-200 rounded-lg p-6 shadow-sm relative">
               <span className="text-2xl font-serif font-bold text-accent-800 mb-2 block">
                 04
               </span>
@@ -382,107 +385,7 @@ export default async function HomePage() {
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                 Receive regular milestone reports, mock examination reviews, and ongoing feedback that demonstrates tangible improvement.
               </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* 7. STUDY MATERIALS / DOCS PREVIEW */}
-      <section className="py-16 sm:py-24 bg-white border-b border-slate-200">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
-            <SectionHeading
-              tag="English Lab Publications"
-              title="Curated Study Materials &amp; Guides"
-              subtitle="Access comprehensive digital study guides, worksheets, and examination preparation notes crafted by veteran educators."
-              centered={false}
-              className="max-w-2xl"
-            />
-
-            <Link
-              href="/docs"
-              className="inline-flex items-center text-sm font-semibold text-accent-800 hover:text-accent-700 transition-colors shrink-0"
-            >
-              <span>Explore All Study Materials</span>
-              <ArrowRight className="w-4 h-4 ml-1.5" />
-            </Link>
-          </div>
-
-          {featuredDocs.length > 0 ? (
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-              {featuredDocs.map((doc) => (
-                <div
-                  key={doc.id}
-                  className="bg-white border border-slate-200 rounded-lg overflow-hidden flex flex-col justify-between hover:shadow-md transition-shadow group"
-                >
-                  <div>
-                    <div className="relative h-44 w-full bg-navy-950">
-                      <Image
-                        src={doc.thumbnail}
-                        alt={doc.title}
-                        fill
-                        sizes="(max-width: 768px) 100vw, 33vw"
-                        className="object-cover group-hover:scale-105 transition-transform duration-300 opacity-90"
-                      />
-                      <div className="absolute top-3 left-3 bg-white/95 text-navy-950 text-[11px] font-bold uppercase tracking-wider px-2 py-0.5 rounded">
-                        {doc.category}
-                      </div>
-                      <div className="absolute top-3 right-3 bg-navy-950/90 text-white text-xs font-bold px-2 py-0.5 rounded border border-navy-800">
-                        {doc.priceFormatted}
-                      </div>
-                    </div>
-
-                    <div className="p-5">
-                      <div className="text-xs text-slate-500 mb-1">
-                        {doc.format} • {doc.pages} pages • Level: {doc.level}
-                      </div>
-                      <h3 className="text-base font-serif font-bold text-navy-950 mb-2 leading-snug group-hover:text-accent-800 transition-colors line-clamp-2">
-                        {doc.title}
-                      </h3>
-                      <p className="text-xs text-slate-600 leading-relaxed line-clamp-2">
-                        {doc.shortDescription}
-                      </p>
-                    </div>
-                  </div>
-
-                  <div className="px-5 py-3 bg-slate-50 border-t border-slate-100 flex items-center justify-between">
-                    <span className="text-xs font-semibold text-slate-500">
-                      Digital Download
-                    </span>
-                    <Link
-                      href="/docs"
-                      className="text-xs font-bold text-accent-800 hover:text-accent-700 flex items-center gap-1"
-                    >
-                      <span>View in Store</span>
-                      <ArrowRight className="w-3.5 h-3.5" />
-                    </Link>
-                  </div>
-                </div>
-              ))}
-            </div>
-          ) : (
-            <div className="p-8 text-center bg-slate-50 border border-slate-200 rounded-lg text-slate-500 text-sm">
-              New study materials are currently being prepared. Visit our{" "}
-              <Link href="/docs" className="text-accent-800 font-semibold underline">
-                Study Materials library
-              </Link>{" "}
-              to explore all available publications.
-            </div>
-          )}
-
-          <div className="mt-10 p-5 bg-sand-50 border border-sand-200/80 rounded-lg flex flex-col sm:flex-row items-center justify-between gap-4 text-xs sm:text-sm text-slate-700">
-            <div className="flex items-center gap-2.5">
-              <FileText className="w-5 h-5 text-accent-800 shrink-0" />
-              <span>
-                Looking for customized curriculum packets or institutional bulk licenses?
-              </span>
-            </div>
-            <Link
-              href="/contact?subject=Institutional+Material+Licensing"
-              className="font-bold text-accent-800 hover:text-accent-700 underline shrink-0"
-            >
-              Contact Our Publishing Desk &rarr;
-            </Link>
+            </FadeIn>
           </div>
         </div>
       </section>
@@ -499,14 +402,16 @@ export default async function HomePage() {
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-            {testimonials.map((t) => (
-              <TestimonialCard key={t.id} testimonial={t} />
+            {testimonials.map((t, idx) => (
+              <FadeIn key={t.id} delay={idx * 150}>
+                <TestimonialCard testimonial={t} />
+              </FadeIn>
             ))}
           </div>
 
-          <div className="mt-10 text-center text-xs text-slate-500">
+          <FadeIn delay={200} className="mt-10 text-center text-xs text-slate-500">
             All testimonials reflect verified experiences from active English Lab Consultancy learners.
-          </div>
+          </FadeIn>
         </div>
       </section>
 

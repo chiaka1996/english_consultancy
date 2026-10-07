@@ -1,5 +1,6 @@
 import Link from "next/link";
 import { ArrowRight, PhoneCall } from "lucide-react";
+import FadeIn from "@/components/FadeIn";
 
 export default function CTASection({
   title = "Ready to Improve Your English?",
@@ -10,7 +11,7 @@ export default function CTASection({
 }) {
   return (
     <section className={`py-16 sm:py-20 bg-navy-950 text-white relative overflow-hidden ${className}`}>
-      <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
+      <FadeIn className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10">
         <span className="inline-block text-xs font-bold uppercase tracking-widest text-accent-300 bg-navy-900 border border-navy-800 px-3 py-1 rounded-full mb-4">
           Admissions &amp; Consultation
         </span>
@@ -50,7 +51,7 @@ export default function CTASection({
             <span>+234 814 645 0315</span>
           </a>
         </div>
-      </div>
+      </FadeIn>
     </section>
   );
 }

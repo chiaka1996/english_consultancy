@@ -3,6 +3,7 @@ import { CheckCircle2, ArrowRight, Laptop, MapPin, Globe, Clock, HelpCircle, Pho
 import SectionHeading from "@/components/SectionHeading";
 import ServiceCard from "@/components/ServiceCard";
 import CTASection from "@/components/CTASection";
+import FadeIn from "@/components/FadeIn";
 import { services } from "@/data/services";
 
 export const metadata = {
@@ -16,7 +17,7 @@ export default function ServicesPage() {
     <div className="space-y-0">
       {/* 1. SERVICES HERO */}
       <section className="bg-sand-50 border-b border-sand-200/80 py-16 sm:py-20 lg:py-24">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-5">
+        <FadeIn className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-5">
           <span className="inline-block text-xs font-bold uppercase tracking-widest text-accent-800 bg-white border border-sand-200 px-3 py-1 rounded-full">
             Specialized Programmes
           </span>
@@ -29,14 +30,14 @@ export default function ServicesPage() {
             From targeted one-on-one school mentorship and intensive national examination preparation to corporate
             communication advisory, every English Lab service is built upon personalized pedagogical excellence.
           </p>
-        </div>
+        </FadeIn>
       </section>
 
       {/* 2. DELIVERY MODES STRIP */}
       <section className="bg-white border-b border-slate-200 py-10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div className="flex items-start gap-4 p-6 rounded-lg bg-slate-50 border border-slate-200">
+            <FadeIn delay={0} className="flex items-start gap-4 p-6 rounded-lg bg-slate-50 border border-slate-200">
               <div className="w-12 h-12 rounded-md bg-navy-950 text-white flex items-center justify-center shrink-0">
                 <MapPin className="w-6 h-6 text-accent-300" />
               </div>
@@ -48,9 +49,9 @@ export default function ServicesPage() {
                   Dedicated in-person sessions conducted across select locations in Lagos for learners who thrive on direct, face-to-face mentorship and hands-on paper-based practice.
                 </p>
               </div>
-            </div>
+            </FadeIn>
 
-            <div className="flex items-start gap-4 p-6 rounded-lg bg-slate-50 border border-slate-200">
+            <FadeIn delay={150} className="flex items-start gap-4 p-6 rounded-lg bg-slate-50 border border-slate-200">
               <div className="w-12 h-12 rounded-md bg-navy-950 text-white flex items-center justify-center shrink-0">
                 <Globe className="w-6 h-6 text-accent-300" />
               </div>
@@ -62,7 +63,7 @@ export default function ServicesPage() {
                   High-engagement virtual instruction using structured digital whiteboards, real-time shared document critique, and recorded review modules for students across Nigeria and internationally.
                 </p>
               </div>
-            </div>
+            </FadeIn>
           </div>
         </div>
       </section>
@@ -78,8 +79,10 @@ export default function ServicesPage() {
           />
 
           <div className="space-y-10">
-            {services.map((service) => (
-              <ServiceCard key={service.id} service={service} mode="detailed" />
+            {services.map((service, idx) => (
+              <FadeIn key={service.id} delay={idx * 100}>
+                <ServiceCard service={service} mode="detailed" />
+              </FadeIn>
             ))}
           </div>
         </div>
@@ -88,7 +91,7 @@ export default function ServicesPage() {
       {/* 4. ADVISORY & PLACEMENT SUPPORT */}
       <section className="py-16 sm:py-20 bg-white border-b border-slate-200">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="bg-sand-50 border border-sand-200 rounded-xl p-8 sm:p-12 text-center space-y-6">
+          <FadeIn className="bg-sand-50 border border-sand-200 rounded-xl p-8 sm:p-12 text-center space-y-6">
             <div className="w-12 h-12 rounded-full bg-white border border-sand-300 text-accent-800 mx-auto flex items-center justify-center">
               <HelpCircle className="w-6 h-6" />
             </div>
@@ -119,7 +122,7 @@ export default function ServicesPage() {
                 <span>Call +234 814 645 0315</span>
               </a>
             </div>
-          </div>
+          </FadeIn>
         </div>
       </section>
 

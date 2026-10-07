@@ -17,6 +17,7 @@ import {
 
 import SectionHeading from "@/components/SectionHeading";
 import CTASection from "@/components/CTASection";
+import FadeIn from "@/components/FadeIn";
 
 export const metadata = {
   title: "About Us | English Lab Consultancy",
@@ -109,7 +110,7 @@ export default function AboutPage() {
     <div className="space-y-0">
       {/* 1. ABOUT HERO */}
       <section className="bg-sand-50 border-b border-sand-200/80 py-16 sm:py-20 lg:py-24">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-5">
+        <FadeIn className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-5">
           <span className="inline-block text-xs font-bold uppercase tracking-widest text-accent-800 bg-white border border-sand-200 px-3 py-1 rounded-full">
             Our Purpose &amp; Story
           </span>
@@ -122,7 +123,7 @@ export default function AboutPage() {
             Dedicated to making English learning accessible, enjoyable, and genuinely effective.
             We combine rigorous linguistic pedagogy with personalized mentorship that opens doors to new opportunities.
           </p>
-        </div>
+        </FadeIn>
       </section>
 
       {/* 2. OUR STORY */}
@@ -130,7 +131,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
             {/* Left Story Text */}
-            <div className="lg:col-span-7 space-y-6">
+            <FadeIn className="lg:col-span-7 space-y-6">
               <span className="text-xs font-bold uppercase tracking-widest text-accent-800 bg-accent-50 border border-accent-100 px-3 py-1 rounded-full">
                 Our Story
               </span>
@@ -168,10 +169,10 @@ export default function AboutPage() {
                   <div className="text-xs text-slate-500">Virtual Interactive Delivery</div>
                 </div>
               </div>
-            </div>
+            </FadeIn>
 
             {/* Right Story Visual */}
-            <div className="lg:col-span-5 relative">
+            <FadeIn delay={150} className="lg:col-span-5 relative">
               <div className="relative aspect-[4/5] rounded-xl overflow-hidden border border-slate-200 shadow-md bg-slate-100">
                 <Image
                   src="https://images.unsplash.com/photo-1534644107580-3a4dbd494a95?auto=format&fit=crop&w=1000&q=80"
@@ -181,7 +182,7 @@ export default function AboutPage() {
                   className="object-cover"
                 />
               </div>
-            </div>
+            </FadeIn>
           </div>
         </div>
       </section>
@@ -191,7 +192,7 @@ export default function AboutPage() {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             {/* Mission */}
-            <div className="bg-white border border-slate-200 rounded-xl p-8 sm:p-10 shadow-sm flex flex-col justify-between">
+            <FadeIn delay={0} className="bg-white border border-slate-200 rounded-xl p-8 sm:p-10 shadow-sm flex flex-col justify-between">
               <div className="space-y-4">
                 <div className="w-12 h-12 rounded-lg bg-accent-50 text-accent-800 flex items-center justify-center border border-accent-100">
                   <Target className="w-6 h-6" />
@@ -210,10 +211,10 @@ export default function AboutPage() {
                 <CheckCircle2 className="w-4 h-4" />
                 <span>Learner-Centered • Practical • Results-Oriented</span>
               </div>
-            </div>
+            </FadeIn>
 
             {/* Vision */}
-            <div className="bg-white border border-slate-200 rounded-xl p-8 sm:p-10 shadow-sm flex flex-col justify-between">
+            <FadeIn delay={150} className="bg-white border border-slate-200 rounded-xl p-8 sm:p-10 shadow-sm flex flex-col justify-between">
               <div className="space-y-4">
                 <div className="w-12 h-12 rounded-lg bg-navy-950 text-white flex items-center justify-center border border-navy-800">
                   <Eye className="w-6 h-6 text-accent-300" />
@@ -232,11 +233,10 @@ export default function AboutPage() {
                 <CheckCircle2 className="w-4 h-4" />
                 <span>International Standards • Lifelong Competence</span>
               </div>
-            </div>
+            </FadeIn>
           </div>
         </div>
       </section>
-
       {/* 5. OUR PEDAGOGICAL APPROACH */}
       <section className="py-16 sm:py-24 bg-white border-b border-slate-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -249,37 +249,37 @@ export default function AboutPage() {
           />
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-            <div className="p-6 bg-sand-50 border border-sand-200/80 rounded-lg space-y-3">
+            <FadeIn delay={0} className="p-6 bg-sand-50 border border-sand-200/80 rounded-lg space-y-3">
               <span className="text-xs font-bold uppercase tracking-wider text-accent-800">Pillar 01</span>
               <h4 className="text-lg font-serif font-bold text-navy-950">Diagnostic Pacing</h4>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                 We assess the learner first. Identifying specific phonetic, syntactic, or confidence bottlenecks ensures every hour of study targets high-impact improvements.
               </p>
-            </div>
+            </FadeIn>
 
-            <div className="p-6 bg-sand-50 border border-sand-200/80 rounded-lg space-y-3">
+            <FadeIn delay={100} className="p-6 bg-sand-50 border border-sand-200/80 rounded-lg space-y-3">
               <span className="text-xs font-bold uppercase tracking-wider text-accent-800">Pillar 02</span>
               <h4 className="text-lg font-serif font-bold text-navy-950">Interactive Rigor</h4>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                 Lecturing alone does not build language fluency. We engage students in constant verbal exchange, structured debates, essay critique, and real-time corrections.
               </p>
-            </div>
+            </FadeIn>
 
-            <div className="p-6 bg-sand-50 border border-sand-200/80 rounded-lg space-y-3">
+            <FadeIn delay={200} className="p-6 bg-sand-50 border border-sand-200/80 rounded-lg space-y-3">
               <span className="text-xs font-bold uppercase tracking-wider text-accent-800">Pillar 03</span>
               <h4 className="text-lg font-serif font-bold text-navy-950">Syntactic Foundations</h4>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                 We demystify the underlying architecture of English grammar—clauses, tenses, concord, and lexis—so students understand why rules exist, rather than memorizing blindly.
               </p>
-            </div>
+            </FadeIn>
 
-            <div className="p-6 bg-sand-50 border border-sand-200/80 rounded-lg space-y-3">
+            <FadeIn delay={300} className="p-6 bg-sand-50 border border-sand-200/80 rounded-lg space-y-3">
               <span className="text-xs font-bold uppercase tracking-wider text-accent-800">Pillar 04</span>
               <h4 className="text-lg font-serif font-bold text-navy-950">Contextual Fluency</h4>
               <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                 Every concept is anchored in real-world use: an examination essay, a workplace email, a presentation, or classroom discourse. Language is taught for life.
               </p>
-            </div>
+            </FadeIn>
           </div>
         </div>
       </section>
@@ -299,8 +299,9 @@ export default function AboutPage() {
             {differentiators.map((item, idx) => {
               const IconComp = item.icon;
               return (
-                <div
+                <FadeIn
                   key={idx}
+                  delay={idx * 100}
                   className="bg-white border border-slate-200 rounded-lg p-6 shadow-sm flex flex-col space-y-3"
                 >
                   <div className="w-10 h-10 rounded bg-navy-950 text-accent-300 flex items-center justify-center">
@@ -312,7 +313,7 @@ export default function AboutPage() {
                   <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
                     {item.description}
                   </p>
-                </div>
+                </FadeIn>
               );
             })}
           </div>
@@ -334,8 +335,9 @@ export default function AboutPage() {
             {whoWeServe.map((group, idx) => {
               const IconComp = group.icon;
               return (
-                <div
+                <FadeIn
                   key={idx}
+                  delay={idx * 100}
                   className="border border-slate-200 rounded-xl p-6 sm:p-8 bg-white hover:border-slate-300 transition-colors shadow-sm"
                 >
                   <div className="flex items-center gap-3.5 mb-4">
@@ -362,7 +364,7 @@ export default function AboutPage() {
                       </div>
                     ))}
                   </div>
-                </div>
+                </FadeIn>
               );
             })}
           </div>

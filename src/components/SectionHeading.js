@@ -1,3 +1,5 @@
+import FadeIn from "@/components/FadeIn";
+
 export default function SectionHeading({
   tag,
   title,
@@ -7,7 +9,7 @@ export default function SectionHeading({
   inverted = false,
 }) {
   return (
-    <div
+    <FadeIn
       className={`max-w-3xl ${
         centered ? "mx-auto text-center" : "text-left"
       } ${className}`}
@@ -39,6 +41,6 @@ export default function SectionHeading({
           {subtitle}
         </p>
       )}
-    </div>
+    </FadeIn>
   );
 }
