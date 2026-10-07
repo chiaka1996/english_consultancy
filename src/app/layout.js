@@ -10,6 +10,16 @@ export const metadata = {
   },
   description:
     "An established English language education consultancy offering personalized in-person and virtual tutoring, grammar and eloquence mastery, examination preparation (SSCE, NECO, UTME), and institutional advisory.",
+  icons: {
+    icon: [
+      { url: "/favicon.ico" },
+      { url: "/icon.png", type: "image/png", sizes: "32x32" },
+    ],
+    apple: [
+      { url: "/apple-icon.png", sizes: "180x180", type: "image/png" },
+    ],
+    shortcut: ["/favicon.ico"],
+  },
   keywords: [
     "English Lab Consultancy",
     "English tutoring Lagos",

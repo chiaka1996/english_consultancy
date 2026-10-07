@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 
 import ContactForm from "@/components/ContactForm";
+import FadeIn from "@/components/FadeIn";
 
 export const metadata = {
   title: "Contact Us | English Lab Consultancy",
@@ -27,7 +28,7 @@ export default function ContactPage({ searchParams }) {
     <div className="space-y-0">
       {/* 1. CONTACT HERO */}
       <section className="bg-sand-50 border-b border-sand-200/80 py-16 sm:py-20">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-5">
+        <FadeIn className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-5">
           <span className="inline-block text-xs font-bold uppercase tracking-widest text-accent-800 bg-white border border-sand-200 px-3 py-1 rounded-full">
             Admissions &amp; Advisory
           </span>
@@ -40,7 +41,7 @@ export default function ContactPage({ searchParams }) {
             Have questions about our tutoring schedules, national examination preparation, or institutional consultancy?
             Our educational advisory team is here to guide you toward the right programme.
           </p>
-        </div>
+        </FadeIn>
       </section>
 
       {/* 2. MAIN 2-COLUMN CONTACT LAYOUT */}
@@ -48,7 +49,7 @@ export default function ContactPage({ searchParams }) {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-16">
             {/* Left Column: Direct Contact Information */}
-            <div className="lg:col-span-5 space-y-8">
+            <FadeIn className="lg:col-span-5 space-y-8">
               <div>
                 <span className="text-xs font-bold uppercase tracking-widest text-accent-800 bg-accent-50 border border-accent-100 px-3 py-1 rounded-full">
                   Direct Inquiries
@@ -149,7 +150,7 @@ export default function ContactPage({ searchParams }) {
                   <span>Connect On Social Media</span>
                 </h3>
                 <div className="flex flex-wrap gap-3 text-xs font-semibold text-slate-700">
-                  <a
+                  {/* <a
                     href="https://facebook.com"
                     target="_blank"
                     rel="noreferrer"
@@ -164,9 +165,9 @@ export default function ContactPage({ searchParams }) {
                     className="px-3 py-1.5 rounded-md bg-slate-100 hover:bg-slate-200 transition-colors"
                   >
                     Instagram
-                  </a>
+                  </a> */}
                   <a
-                    href="https://tiktok.com"
+                    href="https://www.tiktok.com/@englishlabconsultancy"
                     target="_blank"
                     rel="noreferrer"
                     className="px-3 py-1.5 rounded-md bg-slate-100 hover:bg-slate-200 transition-colors"
@@ -175,14 +176,14 @@ export default function ContactPage({ searchParams }) {
                   </a>
                 </div>
               </div>
-            </div>
+            </FadeIn>
 
             {/* Right Column: Contact Form */}
-            <div className="lg:col-span-7">
+            <FadeIn delay={150} className="lg:col-span-7">
               <Suspense fallback={<div className="p-8 text-center text-slate-500">Loading form...</div>}>
                 <ContactForm initialService={service} initialSubject={subject} />
               </Suspense>
-            </div>
+            </FadeIn>
           </div>
         </div>
       </section>

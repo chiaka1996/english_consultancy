@@ -1,5 +1,5 @@
 "use client";
-
+import Image from "next/image";
 import { useState, useEffect } from "react";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -72,18 +72,26 @@ export default function Navbar() {
             className="flex items-center gap-3 group focus:outline-none"
             aria-label="English Lab Consultancy Home"
           >
-            <div className="w-11 h-11 rounded-md bg-navy-950 flex items-center justify-center text-white font-serif font-bold text-xl tracking-tight border border-navy-800 shadow-sm group-hover:bg-navy-900 transition-colors">
+            {/* <div className="w-11 h-11 rounded-md bg-navy-950 flex items-center justify-center text-white font-serif font-bold text-xl tracking-tight border border-navy-800 shadow-sm group-hover:bg-navy-900 transition-colors">
               <span className="text-accent-300 font-serif">E</span>
               <span className="text-slate-100 font-serif">L</span>
+            </div> */}
+            <div className="relative w-[50px] sm:w-[100px] h-[50px] sm:h-[70px]">
+                <Image
+                  src="/logo/logo.jpeg"
+                  alt="Logo"
+                  fill
+                  className="object-contain"
+                />
             </div>
-            <div className="flex flex-col">
+            {/* <div className="flex flex-col">
               <span className="text-navy-950 font-serif font-bold text-lg leading-tight tracking-tight">
                 English Lab
               </span>
               <span className="text-xs uppercase tracking-widest font-semibold text-slate-500">
                 Consultancy
               </span>
-            </div>
+            </div> */}
           </Link>
 
           {/* Desktop Navigation */}

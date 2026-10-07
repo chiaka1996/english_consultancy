@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { Phone, Mail, MapPin, Clock, ArrowUpRight } from "lucide-react";
 
@@ -11,10 +12,25 @@ export default function Footer() {
           {/* Col 1 & 2: Brand & Positioning */}
           <div className="lg:col-span-2 space-y-4">
             <div className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded bg-navy-900 border border-navy-800 flex items-center justify-center text-white font-serif font-bold text-lg">
+              {/* <div className="w-10 h-10 rounded bg-navy-900 border border-navy-800 flex items-center justify-center text-white font-serif font-bold text-lg">
                 <span className="text-accent-300 font-serif">E</span>
                 <span className="text-slate-100 font-serif">L</span>
+              </div> */}
+
+               <Link
+                  href="/"
+                  aria-label="English Lab Consultancy Home"
+                >
+               <div className="relative w-[50px] sm:w-[100px] h-[50px] sm:h-[70px]">
+                  <Image
+                    src="/logo/footerLogo.png"
+                    alt="Logo"
+                    fill
+                    className="object-contain"
+                  />
               </div>
+              </Link>
+
               <div>
                 <span className="text-white font-serif font-bold text-lg block leading-none">
                   English Lab Consultancy
@@ -138,7 +154,7 @@ export default function Footer() {
               <li className="pt-2">
                 <div className="text-xs text-slate-400 mb-1 font-medium">Social Channels</div>
                 <div className="flex gap-3 text-slate-400">
-                  <a
+                  {/* <a
                     href="https://facebook.com"
                     target="_blank"
                     rel="noreferrer"
@@ -147,8 +163,8 @@ export default function Footer() {
                   >
                     Facebook
                   </a>
-                  <span className="text-slate-600">•</span>
-                  <a
+                  <span className="text-slate-600">•</span> */}
+                  {/* <a
                     href="https://instagram.com"
                     target="_blank"
                     rel="noreferrer"
@@ -157,9 +173,9 @@ export default function Footer() {
                   >
                     Instagram
                   </a>
-                  <span className="text-slate-600">•</span>
+                  <span className="text-slate-600">•</span> */}
                   <a
-                    href="https://tiktok.com"
+                    href="https://www.tiktok.com/@englishlabconsultancy"
                     target="_blank"
                     rel="noreferrer"
                     className="hover:text-white transition-colors text-xs"

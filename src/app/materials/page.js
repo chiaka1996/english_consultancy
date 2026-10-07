@@ -2,6 +2,7 @@ import Link from "next/link";
 import { createClient } from "@/lib/supabase/server";
 import { normalizeDocument } from "@/lib/normalizeDocument";
 import { BookOpen, FileText, Database, ArrowRight } from "lucide-react";
+import FadeIn from "@/components/FadeIn";
 
 export const metadata = {
   title: "Study Materials | English Lab Consultancy",
@@ -34,7 +35,7 @@ export default async function StudyMaterialsPage() {
     <div className="space-y-0">
       {/* Header Banner */}
       <section className="bg-sand-50 border-b border-sand-200/80 py-14 sm:py-18">
-        <div className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
+        <FadeIn className="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-4">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white border border-sand-200 text-xs font-semibold text-navy-900 uppercase tracking-wider">
             <BookOpen className="w-3.5 h-3.5 text-accent-700" />
             <span>Digital Publications Library</span>
@@ -47,7 +48,7 @@ export default async function StudyMaterialsPage() {
           <p className="text-base text-slate-600 max-w-2xl mx-auto">
             Official curriculum guides, syntactic handbooks, and examination preparation resources published by English Lab Consultancy.
           </p>
-        </div>
+        </FadeIn>
       </section>
 
       {/* Database Notice (if any) */}
@@ -93,9 +94,10 @@ export default async function StudyMaterialsPage() {
 
           {materials.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-              {materials.map((material) => (
-                <div
+              {materials.map((material, idx) => (
+                <FadeIn
                   key={material.id}
+                  delay={idx * 100}
                   className="bg-white border border-slate-200 rounded-lg p-6 flex flex-col justify-between hover:border-slate-300 hover:shadow-md transition-all group"
                 >
                   <div>
@@ -131,13 +133,19 @@ export default async function StudyMaterialsPage() {
                       <ArrowRight className="w-3 h-3" />
                     </Link>
                   </div>
-                </div>
+                </FadeIn>
               ))}
             </div>
           ) : (
-            <div className="text-center py-12 bg-slate-50 border border-slate-200 rounded-lg text-slate-500 text-sm">
-              No publications found in the database.
-            </div>
+            <FadeIn className="text-center py-16 px-4 bg-slate-50 border border-slate-200 rounded-xl max-w-lg mx-auto">
+              <FileText className="w-10 h-10 text-slate-400 mx-auto mb-3" />
+              <h3 className="text-lg font-serif font-bold text-navy-950 mb-1">
+                No available document
+              </h3>
+              <p className="text-sm text-slate-500 max-w-md mx-auto">
+                There are currently no study materials or documents available.
+              </p>
+            </FadeIn>
           )}
         </div>
       </section>
